@@ -8,13 +8,33 @@ body {
 
 /* Header */
 
+header.clearfix {
+    background: #fff;
+    border-bottom: 2px solid #cccccc;
+}
+
 .logo {
     background: #4aaaa5;
     color: white;
     padding: 28px;
     font-size: 40px;
     text-align: center;
+    -webkit-animation-name: colors; 
+    -webkit-animation-duration: 4s; 
+    -webkit-animation-delay: 1s; 
+    animation-name: colors;
+    animation-duration: 10s;
+    animation-delay: 1s;
+    animation-iteration-count: infinite;
 }
+
+@keyframes colors {
+    0%   {background-color: #4aaaa5e8;}
+    25%  {background-color:#4aaaa5cc;}
+    50%  {background-color: #ee0031b3;}
+    75%  {background-color:#4aaaa5cc;;}
+    100%  {background-color:#4aaaa5e8;}
+  }
 
 nav li {
     display: inline-block;
@@ -39,12 +59,9 @@ nav a{
     text-decoration: none;
     color: #777777;
 }
-.nav-wrapper {
+.nav-wrapper{
     width: 100%;
-    border-bottom: 2px solid #cccccc;
-    background: #fff;
     text-align: center;
-    padding-bottom: 20px;
 }
 
 /* Main content */
@@ -63,7 +80,9 @@ h1 {
 .heading {
     color:  #4aaaa5;
 }
-
+h1.heading{
+ padding-bottom: 10px;
+}
 section {
     border: 2px solid #dddddd;
     padding: 10px 20px 60px 20px;
@@ -151,20 +170,19 @@ button{
 
 
 
-
-
-
-@media only screen and (min-width: 768px) {
+@media only screen and (min-width: 768px){
 
 .nav-wrapper {
     margin: 0 auto;
-    border-bottom: 2px solid #cccccc;
     height: 95px;
 }
 
 .logo {
     padding: 28px;
     float: left;
+}
+nav ul{
+    padding-right: 30px;
 }
 
 nav li {
@@ -198,11 +216,11 @@ main {
 
 section {
     border: 2px solid #dddddd;
-    padding: 20px 20px 60px 20px;
+    padding: 20px 10px 60px 10px;
     clear: both;
     margin: 0 auto;
     background: #ffffff;
-    width: 90%;
+    width: 95%;
 }
 
 img {
@@ -238,7 +256,7 @@ input{
     width: 350px;
     height: 250px;
     float: left;
-    margin-left: 30px;
+    margin-left: 10px;
     margin-top: 40px;
 }
 
@@ -269,8 +287,15 @@ input{
 
 @media only screen and (min-width: 960px) {
 
+    header.clearfix {
+        width: 100%;
+    }
     .nav-wrapper {
-    width: 960px;
+        width: 960px;
+    }
+
+    img.bio{
+        margin-right: 20px;
     }
 
     section{
